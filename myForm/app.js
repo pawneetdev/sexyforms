@@ -1,15 +1,11 @@
 $(document).ready(function() {
-	
-	/*var index_of_activate_class = $('li.activate').index() + 1;
-	// alert(index_of_activate_class);*/
 
-	// var no_of_fields = $('li.form-group').length;
-	// alert(no_of_fields);
-
-	var activate_index = $('li.activate').index() + 1;
-	var no_of_fields = $('li.form-group').length - 1;
-	$('.activate_index').html(activate_index);
-	$('.no_of_fields').html(no_of_fields);
+	// For initial progress index //////////////////////
+	var activate_index = $('li.activate').index() + 1;//
+	var no_of_fields = $('li.form-group').length - 1; //
+	$('.activate_index').html(activate_index);		  //
+	$('.no_of_fields').html(no_of_fields);			  //
+	////////////////////////////////////////////////////
 
 	// When a letter is entered in text field show the next button ///////
 	$('.form-control').keyup(function() {								//
@@ -27,41 +23,61 @@ $(document).ready(function() {
 			activate.removeClass("activate");
 			inactive.removeClass("hide inactive").addClass("activate").next().addClass('inactive');
 
-			///// For progress index like 1/6 //////////////////
+			///// For progress index from 2/6 //////////////////
 			var activate_index = $('li.activate').index() + 1;//
 			var no_of_fields = $('li.form-group').length - 1; //
 			$('.activate_index').html(activate_index);		  //
 			$('.no_of_fields').html(no_of_fields);			  //
 			////////////////////////////////////////////////////
 
-			//if($('.activate_index').html() == $('.no_of_fields').html()+1)
-			if(activate_index == no_of_fields+1)
-			{
-				$('.count, .next').hide();
-        		$('.submit').removeClass("hide");
-			}
+			// To show submit button and hide count index and next button//
+			if(activate_index == no_of_fields+1)						 //
+			{															 //
+				$('.count, .next').hide();								 //
+        		$('.submit').removeClass("hide");						 //
+			}															 //
+			///////////////////////////////////////////////////////////////
 		}
 
 	});
 
-	$('#q1').keyup(function() {
-		var value = $(this).val();
-		$('.answer1').val(value);
+	$(".submit").click(function() {
+    	
+    	value = $('.answer1').val();
+    	$("#answer1").val(value);
+
+    	value = $('.answer2').val();
+    	$("#answer2").val(value);
+
+    	value = $('.answer3').val();
+    	$("#answer3").val(value);
+
+    	value = $('.answer4').val();
+    	$("#answer4").val(value);
+
 	});
 
-	$('#q2').keyup(function() {
-		var value = $(this).val();
-		$('.answer2').val(value);
-	});
+  	if(activate_index != no_of_fields+1)
+  	{
+		$('#q1').keyup(function() {
+			var value = $(this).val();
+			$('.answer1').val(value);
+		});
 
-	$('#q3').keyup(function() {
-		var value = $(this).val();
-		$('.answer3').val(value);
-	});
+		$('#q2').keyup(function() {
+			var value = $(this).val();
+			$('.answer2').val(value);
+		});
 
-	$('#q4').keyup(function() {
-		var value = $(this).val();
-		$('.answer4').val(value);
-	});
+		$('#q3').keyup(function() {
+			var value = $(this).val();
+			$('.answer3').val(value);
+		});
+
+		$('#q4').keyup(function() {
+			var value = $(this).val();
+			$('.answer4').val(value);
+		});
+	}
 
 });
