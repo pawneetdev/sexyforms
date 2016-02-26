@@ -1,0 +1,42 @@
+.modal-content
+{
+    heigth: 100%;
+}
+
+.modal-content
+{
+    height: 100%;
+    background-color: #ffc24d;    
+}
+
+.sexyform li
+{
+    list-style: none;
+}
+
+.btn-default,
+.btn-default:focus {
+    background: #ee7d13;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 12px 18px;
+    text-shadow: none;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.count
+{
+    font-size:36px;
+    position:absolute;
+    bottom:5%;
+    left: 5%;
+}
