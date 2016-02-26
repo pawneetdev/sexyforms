@@ -1,54 +1,73 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
-</head>
-<body>
+	<head>
+		<title>SexyForm</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
 
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+	<body>
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+		<div>
+		<div class="modal fade" id="myModal" role="dialog" data-keyboard="false" data-backdrop="static">
+    		<div class="modal-content vertical-center">
+				<div class="container container-fullscreen">
+					<h1 class="animated bounceInLeft">Quick Company</h1>
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog" data-keyboard="false" data-backdrop="static">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        
-        <!-- <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div> -->
-        
-        <!-- Add modal body here -->
-        <div class="modal-body">
-          <form>
-            <span class="question">Add questions here</span>
-            <input type="text">
-            <button id="next-btn">Next question</button>
-          </form>
-        </div>
-        <!-- -->
-        
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div> -->
+					<ul class="sexyform">
+						<li class="form-group activate animated fadeInRightBig">
+							<h3>Headline 1</h3>
+							<span>Question 1</span>
+							<input type="text" id="q1" class="form-control">
+						</li>
+						
+						<li class="form-group hide inactive animated">
+							<h3>Headline 2</h3>
+							<span>Question 2</span>
+							<input type="text" id="q2" class="form-control">
+						</li>
+						
+						<li class="form-group hide animated">
+							<h3>Headline 3</h3>
+							<span>Question 3</span>
+							<input type="text" id="q3" class="form-control">
+						</li>
+						
+						<li class="form-group hide animated">
+							<h3>Headline 4</h3>
+							<span>Question 4</span>
+							<input type="text" id="q4" class="form-control">
+						</li>
 
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
+						<li class="form-group hide scrollable">
+							<h3>Please check the information entered by you</h3>
+							<input type="text" class="answer1 form-control">
+							<input type="text" class="answer2 form-control">
+							<input type="text" class="answer3 form-control">
+							<input type="text" class="answer4 form-control">
+						</li>
+					</ul>
 
-</body>
+					<div class="count"><span class="activate_index"></span> / <span class="no_of_fields"></span></div>
+
+					<form action='#' method='get' class="myform">
+			 			<input type="hidden" id="answer1" name="answer1" class="answer1">
+			 			<input type="hidden" id="answer2" name="answer2" class="answer2">
+			 			<input type="hidden" id="answer3" name="answer3" class="answer3">
+			 			<input type="hidden" id="answer4" name="answer4" class="answer4">
+			 			<input type="submit" class="btn btn-default btn-lg hide submit" value="Submit">
+					</form>
+
+					<button class="btn btn-default btn-lg next animated hide">Next</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

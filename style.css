@@ -1,34 +1,42 @@
-.body
+.modal-content
 {
-    margin: 0px;
-}
-
-.modal-dialog
-{
-    margin-top: 0px;
-    width: 100%;
+    heigth: 100%;
 }
 
 .modal-content
 {
-    background: url('http://tommygeek.com/wp-content/uploads/2014/07/MacBook-Pro-Desk-Concept-PSD_2200_blurred_dimmed75.jpg');
     height: 100%;
+    background-color: #ffc24d;    
 }
 
-#myModal
+.sexyform li
 {
-    top:0px;
-    left: 0px;
-    right: 0px;
-    outline: none;
+    list-style: none;
 }
 
-.modal-dialog,.modal-content
-{
-    height: 100%;
+.btn-default,
+.btn-default:focus {
+    background: #ee7d13;
+    color: #fff;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 12px 18px;
+    text-shadow: none;
 }
 
-.question
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.count
 {
-    color: white;
+    font-size:36px;
+    position:absolute;
+    bottom:5%;
+    left: 5%;
 }
