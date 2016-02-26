@@ -9,7 +9,7 @@ $(function() {
   //$('.progress-bar').css("width", "20%"); //already commented
   
   /////// To show ans in review section/////////////////////////////////////////
-  $('.submit').click(function() {
+  /*$('.submit').click(function() {
     event.preventDefault();
     var darken = '<div class="darken" style="display:none;"></div>';
     $('body').prepend(darken);
@@ -18,17 +18,15 @@ $(function() {
       opacity: 0.8
     }, "fast");
     $('.thanks').removeClass('hide').addClass('fadeInDownBig');
-  });
+  });*/
   /////////////////////////////////////////////////////////////////////////////
 
   ///////////progress bar//////////////////////////////////////////////////////
-  /*var img_cnt = $('li.activate').index() + 1;
+  var img_cnt = $('li.activate').index() + 1;
 
   var img_amt = $('li.form-group').length;
   $('.img_cnt').html(img_cnt);
   $('.img_amt').html(img_amt);
-  var progress = ($('.img_cnt').text() / $('.img_amt').text()) * 100;
-  $('.progress-bar').css("width", progress + "%");*/
   /////////////////////////////////////////////////////////////////////////////
 
   $('.form-control').keyup(function() {
