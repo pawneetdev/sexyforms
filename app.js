@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	// When a letter is entered in text field show the next button ///////
 	$('.form-control').keyup(function() {								//
-    	$('.next').removeClass("hide").removeClass("hide fadeOutDown").addClass("fadeInUp");									//
+    	$('.next').removeClass("hide");									//
   	});																	//
   	//////////////////////////////////////////////////////////////////////
 
@@ -20,8 +20,8 @@ $(document).ready(function() {
 			var activate = $('li.activate');
 			var inactive = $('li.inactive');
 
-			activate.removeClass("fadeInRightBig activate").addClass('fadeOutLeftBig');
-			inactive.removeClass("hide inactive").addClass("activate fadeInRightBig").next().addClass('inactive');
+			activate.removeClass("activate");
+			inactive.removeClass("hide inactive").addClass("activate").next().addClass('inactive');
 
 			///// For progress index from 2/6 //////////////////
 			var activate_index = $('li.activate').index() + 1;//
