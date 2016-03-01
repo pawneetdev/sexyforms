@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	// When a letter is entered in text field show the next button ///////
 	$('.form-control').keyup(function() {								//
-    	$('.next').removeClass("hide");									//
+    	$('.next').removeClass("hide fadeOutDown").addClass("fadeInUp");//
   	});																	//
   	//////////////////////////////////////////////////////////////////////
 
@@ -17,11 +17,13 @@ $(document).ready(function() {
 	    
 	    if ($('.sexyform li').hasClass('activate')) {
 
+	    	$('.next').removeClass("fadeInUp").addClass('fadeOutDown');
+
 			var activate = $('li.activate');
 			var inactive = $('li.inactive');
 
-			activate.removeClass("activate");
-			inactive.removeClass("hide inactive").addClass("activate").next().addClass('inactive');
+			activate.removeClass("fadeInRightBig activate").addClass("fadeOutLeftBig");
+			inactive.removeClass("hide inactive").addClass("activate fadeInRightBig").next().addClass('inactive');
 
 			///// For progress index from 2/6 //////////////////
 			var activate_index = $('li.activate').index() + 1;//
@@ -35,6 +37,7 @@ $(document).ready(function() {
 			{															 //
 				$('.count, .next').hide();								 //
         		$('.submit').removeClass("hide");						 //
+        		$('.question_form').removeClass("hide");				 //
 			}															 //
 			///////////////////////////////////////////////////////////////
 		}
